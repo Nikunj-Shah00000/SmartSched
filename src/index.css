@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Sleek Interface & Minecraft Blocky Pixel Borders */
+  .mc-panel {
+    background-color: #2b2b2b;
+    border: 4px solid #000000;
+    box-shadow: inset -4px -4px 0px #1a1a1a, inset 4px 4px 0px #3d3d3d, 4px 4px 0px rgba(0, 0, 0, 0.4);
+    position: relative;
+  }
+
+  .mc-panel-sleek {
+    background-color: #C6C6C6;
+    border: 4px solid #FFFFFF;
+    box-shadow: 4px 4px 0px #7a7a7a, inset -4px -4px 0px #7a7a7a;
+    position: relative;
+  }
+
+  .mc-panel-wood {
+    background-color: #866043;
+    border: 4px solid #3c2415;
+    box-shadow: inset -4px -4px 0px #5c3f2b, inset 4px 4px 0px #b48563, 4px 4px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  .mc-panel-grass {
+    background-color: #5B8731;
+    border: 4px solid #2D4519;
+    box-shadow: inset 0 -4px 0 rgba(0,0,0,0.2), 4px 4px 0px rgba(0,0,0,0.4);
+  }
+
+  .mc-panel-obsidian {
+    background-color: #1a1528;
+    border: 4px solid #0a0712;
+    box-shadow: inset -4px -4px 0px #0e0a18, inset 4px 4px 0px #2f2746, 4px 4px 0px rgba(0, 0, 0, 0.7);
+  }
+
+  /* Minecraft & Angry Birds Button */
+  .mc-button {
+    background: linear-gradient(180deg, #999999 0%, #737373 50%, #555555 100%);
+    border: 3px solid #000000;
+    box-shadow: inset 2px 2px 0px #c6c6c6, inset -2px -2px 0px #373737, 3px 3px 0px #000000;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    text-shadow: 2px 2px 0px #000000;
+    transition: all 0.1s ease;
+    cursor: pointer;
+  }
+
+  .mc-button:hover {
+    background: linear-gradient(180deg, #aaaaaa 0%, #888888 50%, #666666 100%);
+    box-shadow: inset 2px 2px 0px #ffffff, inset -2px -2px 0px #444444, 4px 4px 0px #000000;
+    transform: translateY(-1px);
+  }
+
+  .mc-button:active {
+    box-shadow: inset -2px -2px 0px #ffffff, inset 2px 2px 0px #222222, 1px 1px 0px #000000;
+    transform: translateY(2px);
+  }
+
+  .mc-button-redstone {
+    background: linear-gradient(180deg, #FF5500 0%, #E61010 50%, #990000 100%);
+    border: 3px solid #000000;
+    box-shadow: inset 2px 2px 0px #ff8888, inset -2px -2px 0px #660000, 3px 3px 0px #000000;
+    color: #ffffff;
+    text-shadow: 2px 2px 0px #000000;
+  }
+
+  .mc-button-redstone:hover {
+    background: linear-gradient(180deg, #ff7733 0%, #ff2222 50%, #aa0000 100%);
+  }
+
+  /* Angry Birds TNT Crate Styling */
+  .tnt-crate {
+    background-color: #FF5500;
+    border: 4px solid #000000;
+    box-shadow: inset -4px -4px 0px #b33c00, inset 4px 4px 0px #ff884d, 4px 4px 0px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tnt-band {
+    background-color: #ffffff;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    color: #000000;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    text-align: center;
+  }
+
+  /* Redstone Wire Glow */
+  .redstone-pulse {
+    animation: redstoneGlow 1.5s infinite alternate ease-in-out;
+  }
+
+  @keyframes redstoneGlow {
+    0% {
+      box-shadow: 0 0 5px #E61010, inset 0 0 5px #E61010;
+      border-color: #E61010;
+    }
+    100% {
+      box-shadow: 0 0 18px #ff4d4d, inset 0 0 10px #ff4d4d;
+      border-color: #ff6666;
+    }
+  }
+
+  /* Crafting Grid Slot */
+  .crafting-slot {
+    width: 68px;
+    height: 68px;
+    background-color: #8b8b8b;
+    border: 4px solid #4a4a4a;
+    box-shadow: inset 3px 3px 0px #4a4a4a, inset -3px -3px 0px #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  /* EXP Bar */
+  .exp-bar-bg {
+    background-color: #121f08;
+    border: 2px solid #000000;
+    box-shadow: inset 1px 1px 0px #000000, inset -1px -1px 0px #335c15;
+    height: 16px;
+    position: relative;
+  }
+
+  .exp-bar-fill {
+    background: linear-gradient(180deg, #87e029 0%, #5B8731 100%);
+    box-shadow: inset 0px 1px 0px #c5ff73;
+    height: 100%;
+    transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+}
+
+/* Custom Scrollbar for Minecraft Theme */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border: 2px solid #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #737373;
+  border: 2px solid #000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
